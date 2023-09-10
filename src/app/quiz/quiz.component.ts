@@ -5,5 +5,5 @@ import { Component } from '@angular/core';
   templateUrl: './quiz.component.html',
 })
 export class QuizComponent {
-
+  myFirstQuestion = 'question 1'
 }
