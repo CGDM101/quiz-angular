@@ -6,4 +6,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'quiz-angular';
+  property = 'Jag lär mig Angular.'
 }
