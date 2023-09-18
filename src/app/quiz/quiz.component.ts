@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 })
 export class QuizComponent {
   test(): void {
-    console.log('sth happend');
+    this.currentQuestion += 1
   }
 
   headerProperty = 'Camillas quiz'
