@@ -1,14 +1,11 @@
 <header>{{headerProperty}}</header>
 <main>
-    <p>Du har {{score}} poäng av {{questions.length}} möjliga</p>
-    <div>
-        <p>Fråga nummer {{currentQuestion +1}} av {{questions.length}}:</p>
-        <p>{{ questions[0].questionText }}</p>
+    <p class="score-section">Du har {{score}} poäng av {{questions.length}} möjliga</p>
+    <div class="question-section">
+        <p class="question-count">Fråga nummer {{currentQuestion +1}} av {{questions.length}}:</p>
+        <p class="question-text">{{ questions[0].questionText }}</p>
     </div>
-    <div>
-        <button (click)="test()">{{ questions[0].answerOptions[0].answerText }}</button>
-        <button>{{ questions[0].answerOptions[1].answerText }}</button>
-        <button>{{ questions[0].answerOptions[2].answerText }}</button>
-        <button>{{ questions[0].answerOptions[3].answerText }}</button>
+    <div class="answer-section">
+        <button (click)="test()" *ngFor="let opt of questions[0].answerOptions">{{opt.answerText}}</button>
     </div>
 </main>
