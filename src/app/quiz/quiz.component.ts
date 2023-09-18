@@ -5,6 +5,10 @@ import { Component } from '@angular/core';
   templateUrl: './quiz.component.html',
 })
 export class QuizComponent {
+  test(): void {
+    console.log('sth happend');
+  }
+
   headerProperty = 'Camillas quiz'
   score = 0
   currentQuestion = 0

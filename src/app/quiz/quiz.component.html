@@ -6,7 +6,7 @@
         <p>{{ questions[0].questionText }}</p>
     </div>
     <div>
-        <button>{{ questions[0].answerOptions[0].answerText }}</button>
+        <button (click)="test()">{{ questions[0].answerOptions[0].answerText }}</button>
         <button>{{ questions[0].answerOptions[1].answerText }}</button>
         <button>{{ questions[0].answerOptions[2].answerText }}</button>
         <button>{{ questions[0].answerOptions[3].answerText }}</button>
