@@ -6,6 +6,6 @@
         <p class="question-text">{{ questions[currentQuestion].questionText }}</p>
     </div>
     <div class="answer-section">
-        <button (click)="test()" *ngFor="let opt of questions[currentQuestion].answerOptions">{{opt.answerText}}</button>
+        <button (click)="HandleAnswerButtonClick()" *ngFor="let opt of questions[currentQuestion].answerOptions">{{opt.answerText}}</button>
     </div>
 </main>

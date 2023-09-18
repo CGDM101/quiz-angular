@@ -5,8 +5,14 @@ import { Component } from '@angular/core';
   templateUrl: './quiz.component.html',
 })
 export class QuizComponent {
-  test(): void {
-    this.currentQuestion += 1
+  HandleAnswerButtonClick(): void {
+    if (this.currentQuestion < this.questions.length -1) {
+      this.currentQuestion += 1
+      // OM korrekt; uppdatera score.
+    } else {
+      console.log('end of quiz reached');
+      // Visa slutvy med totalscore.
+    }
   }
 
   headerProperty = 'Camillas quiz'
