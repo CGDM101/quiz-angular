@@ -1,18 +1,14 @@
-<p>quiz works!</p>
-
-<p>{{ myFirstQuestion }}</p>
-
-<header>my quiz</header>
+<header>{{headerProperty}}</header>
 <main>
-    <p>Du har x poäng av x möjliga</p>
+    <p>Du har {{score}} poäng av {{questions.length}} möjliga</p>
     <div>
-        <p>Fråga nummer x:</p>
-        <p>Frågan</p>
+        <p>Fråga nummer {{currentQuestion +1}} av {{questions.length}}:</p>
+        <p>{{ questions[0].questionText }}</p>
     </div>
     <div>
-        <button>Opt1</button>
-        <button>Opt2</button>
-        <button>Opt3</button>
-        <button>Opt4</button>
+        <button>{{ questions[0].answerOptions[0].answerText }}</button>
+        <button>{{ questions[0].answerOptions[1].answerText }}</button>
+        <button>{{ questions[0].answerOptions[2].answerText }}</button>
+        <button>{{ questions[0].answerOptions[3].answerText }}</button>
     </div>
 </main>
