@@ -1,6 +1,6 @@
 <!-- <header>{{headerProperty}}</header> -->
 <main>
-    <p class="score-section" *ngIf="showScore">Du har {{score}} poäng av {{questions.length}} möjliga</p>
+    <p class="score-section" *ngIf="showScore">You scored {{score}} out of {{questions.length}}</p>
     <div class="app" *ngIf="!showScore">
         <div class="question-section">
             <p class="question-count"><span>Question {{currentQuestion +1}}</span>/{{questions.length}}</p>
