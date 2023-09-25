@@ -5,12 +5,26 @@ import { Component } from '@angular/core';
   templateUrl: './quiz.component.html',
 })
 export class QuizComponent {
-  HandleAnswerButtonClick(): void {
-    if (this.currentQuestion < this.questions.length -1) {
+  HandleAnswerButtonClick(opt: any): void {
+    if (this.currentQuestion < this.questions.length - 1) {
       this.currentQuestion += 1
-      // OM korrekt; uppdatera score.
-    } else {
-      console.log('end of quiz reached');
+      if (opt.isCorrect == true) {
+        this.score++
+        console.log('här1', this.score);
+      } else if (opt.isCorrect == false) {
+        this.score + -0
+        console.log('här2', this.score);
+      }
+    } else if (this.currentQuestion == this.questions.length - 1) {
+      console.log('Nu är vi på sista frågan');
+      if (opt.isCorrect == true) {
+        this.score++
+        console.log('här11', this.score);
+      } else if (opt.isCorrect == false) {
+        this.score + -0
+        console.log('här22', this.score);
+      }
+      console.log('end of quiz, score: ', this.score);
       // Visa slutvy med totalscore.
     }
   }
