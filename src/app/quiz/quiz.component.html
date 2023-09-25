@@ -1,7 +1,7 @@
 <!-- <header>{{headerProperty}}</header> -->
 <main>
-    <div class="app">
-        <!-- <p class="score-section">Du har {{score}} poäng av {{questions.length}} möjliga</p> -->
+    <p class="score-section" *ngIf="showScore">Du har {{score}} poäng av {{questions.length}} möjliga</p>
+    <div class="app" *ngIf="!showScore">
         <div class="question-section">
             <p class="question-count"><span>Question {{currentQuestion +1}}</span>/{{questions.length}}</p>
             <p class="question-text">{{ questions[currentQuestion].questionText }}</p>
@@ -11,5 +11,4 @@
                 *ngFor="let opt of questions[currentQuestion].answerOptions">{{opt.answerText}}</button>
         </div>
     </div>
-
 </main>

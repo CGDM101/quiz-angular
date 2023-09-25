@@ -7,31 +7,27 @@ import { Component } from '@angular/core';
 export class QuizComponent {
   HandleAnswerButtonClick(opt: any): void {
     if (this.currentQuestion < this.questions.length - 1) {
+      this.showScore = false
       this.currentQuestion += 1
       if (opt.isCorrect == true) {
         this.score++
-        console.log('här1', this.score);
       } else if (opt.isCorrect == false) {
         this.score + -0
-        console.log('här2', this.score);
       }
     } else if (this.currentQuestion == this.questions.length - 1) {
-      console.log('Nu är vi på sista frågan');
       if (opt.isCorrect == true) {
         this.score++
-        console.log('här11', this.score);
       } else if (opt.isCorrect == false) {
         this.score + -0
-        console.log('här22', this.score);
       }
-      console.log('end of quiz, score: ', this.score);
-      // Visa slutvy med totalscore.
+      this.showScore = true
     }
   }
 
   headerProperty = 'Camillas quiz'
   score = 0
   currentQuestion = 0
+  showScore = false
   questions = [
     {
       questionText: "What is the capital of France?",
